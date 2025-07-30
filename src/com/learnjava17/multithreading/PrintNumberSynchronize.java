@@ -6,7 +6,7 @@ public class PrintNumberSynchronize {
 
 		for (int i = 1; i <= 26; i++) {
 			try {
-				Thread.sleep(2000);
+				Thread.sleep(500);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

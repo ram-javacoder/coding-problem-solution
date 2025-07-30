@@ -7,7 +7,7 @@ class MyThreadCLass implements Runnable {
 		for (int i = 0; i <= 10; i++) {
 			
 			try {
-				Thread.sleep(2000);
+				Thread.sleep(500);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -27,6 +27,7 @@ public class MultithreadRunnableTask2 {
 		// m.start(); CTE because no start() in Mythread class
 		Thread t = new Thread(m);
 		t.start(); // Creating thread by calling run()
+		
 //		for (int i = 0; i <= 5; i++) {
 //
 //			System.out.println("Main Thread...");

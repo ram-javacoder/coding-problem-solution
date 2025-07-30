@@ -3,6 +3,7 @@ package com.learnjava17.java8programming.employeeoperation;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
 import java.util.function.Predicate;
@@ -33,20 +34,31 @@ public class StreamapiOperation {
 		data.stream().filter((predicateOn).or(predicateOnHrDept)).forEach(e -> System.out.println(e));
 
 		System.out.println("\nFilter the record based on HR and IT Department and sorted based on Age");
-		System.out.println("________________________________________");
+		System.out.println("_______________________________________________________________________");
 
 		data.stream().filter((predicateOn).or(predicateOnHrDept)).sorted((e1, e2) -> e1.getAge() - e2.getAge())
 				.forEach(e -> System.out.println(e));
 
+		// Write a Java 8 program to group the employees by department and count how
+		// many employees are in each department.
+
+		System.out.println("\nGroup employees based on department and count employees in each department: ");
+		System.out.println("___________________________________________________________________________");
+		Map<String, Long> groupEmployeeBasedOnDepAndCount = data.stream()
+				.collect(Collectors.groupingBy(Employee::getDepartment, Collectors.counting()));
+
+		
+		groupEmployeeBasedOnDepAndCount.forEach((dep, count) -> System.out.println(dep + " -> " + count));
+
 		System.out.println("\nFilter the record based on IT and HR Department and sorted based on Salary");
-		System.out.println("________________________________________");
+		System.out.println("__________________________________________________________________________");
 		;
 		data.stream().filter((predicateOn).or(predicateOnHrDept))
 				.sorted((e1, e2) -> Double.compare(e1.getSalary(), e2.getSalary())).forEach(e -> System.out.println(e));
 
 		System.out.println(
 				"\nFilter the record based on IT and HR Department  and sorted based on Salary and Only top 3");
-		System.out.println("________________________________________");
+		System.out.println("__________________________________________________________________________________");
 
 		data.stream().filter((predicateOn).or(predicateOnHrDept))
 				.sorted((e1, e2) -> (int) (e1.getSalary() - e2.getSalary())).limit(3)
@@ -77,16 +89,15 @@ public class StreamapiOperation {
 		 */
 
 		System.out.println("\nList all the Employee whose age between 30 to 33 and sort them on bases of Age");
-		System.out.println("________________________________________");
+		System.out.println("_______________________________________________________________________________");
 		List<Employee> collect = (List<Employee>) data.stream().filter(e -> e.getAge() >= 30 && e.getAge() <= 33)
 				.sorted((e1, e2) -> e1.getAge() - e2.getAge()).collect(Collectors.toList());
 		collect.forEach(System.out::println);
 
 		System.out.println(
 				"\nEmployee who are from marketing department increase their salary by 25 percent and for rest increase salary by 10 percentage");
-		System.out.println("________________________________________");
+		System.out.println("____________________________________________________________________________________________________________________");
 
-		
 		/*
 		 * data.stream().forEach(e -> { if
 		 * (e.getDepartment().equalsIgnoreCase("Marketing")) { e.setSalary(e.getSalary()
@@ -117,7 +128,7 @@ public class StreamapiOperation {
 
 		System.out.println(
 				"\nFor the Employee of IT and Finance increase the salary by 25 percentage and Specifically for a IT Department employee give a boost in rating by 1");
-		System.out.println("________________________________________");
+		System.out.println("__________________________________________________________________________________________________________________________________________");
 //		data.stream().forEach(e -> {
 //			if (e.getDepartment().equalsIgnoreCase("IT") || e.getDepartment().equalsIgnoreCase("Finance")) {
 //				e.setSalary(e.getSalary() + (e.getSalary() * 0.25));
@@ -137,8 +148,8 @@ public class StreamapiOperation {
 			if (e.getDepartment().equalsIgnoreCase("IT")) {
 
 				e.setPerformanceRating(e.getPerformanceRating() + 1);
-			} 
-			
+			}
+
 			if (e.getDepartment().equalsIgnoreCase("IT") || e.getDepartment().equalsIgnoreCase("FINANCE")) {
 
 				e.setSalary(e.getSalary() + (e.getSalary() * 0.25));
@@ -159,7 +170,6 @@ public class StreamapiOperation {
 		});
 		data.stream().forEach(System.out::println);
 
-		
 		/*
 		 * //way 2 List<Employee> test = data.stream().filter(y ->
 		 * y.getTotalYearsOfExperience() == 2 || y.getTotalYearsOfExperience()
@@ -169,10 +179,10 @@ public class StreamapiOperation {
 		 * 
 		 * 
 		 * }).collect(Collectors.toList()); test.forEach(System.out::println);
-		 */	
+		 */
 		System.out.println(
 				"\nEmployees whose age is more than or equal to 35, make them Manager and Collect their Information :");
-		System.out.println("________________________________________");
+		System.out.println("________________________________________________________________________________________________");
 
 		Set<Manager> collectManager = data.stream().filter(e -> e.getAge() >= 35).map(e -> {
 			Manager manager = new Manager();

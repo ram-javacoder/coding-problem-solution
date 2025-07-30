@@ -8,11 +8,14 @@ public class CreateThreadUsingRunnableLamda {
         Runnable task = () -> {
             for (int i = 1; i <= 5; i++) {
                 System.out.println("Thread is running: " + i);
-                try {
-                    Thread.sleep(500); // Pause for 500ms
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+                
+                    try {
+						Thread.sleep(500);
+					} catch (InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					} // Pause for 500ms
+                 
             }
         };
 

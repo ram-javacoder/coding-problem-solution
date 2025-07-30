@@ -1,18 +1,18 @@
 package com.learnjava17.java8programming;
 
-public class Employee {
+public class EmployeeGroup {
 
 	private int empId;
 	private String empName;
 	private String jobTiltle;
 	private double salary;
 
-	public Employee() {
+	public EmployeeGroup() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public Employee(int empId, String empName, String jobTiltle, double salary) {
+	public EmployeeGroup(int empId, String empName, String jobTiltle, double salary) {
 		super();
 		this.empId = empId;
 		this.empName = empName;

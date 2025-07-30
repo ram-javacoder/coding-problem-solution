@@ -5,12 +5,14 @@ class Mythread extends Thread {
 	public void run() {
 
 		for (char i = 'A'; i <= 'Z'; i++) {
+
 			try {
-				Thread.sleep(2000);
+				Thread.sleep(100);
 			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
+
 				e.printStackTrace();
 			}
+
 			System.out.println(i);
 
 		}
@@ -21,14 +23,9 @@ class Mythread extends Thread {
 public class User {
 
 	public static void main(String[] args) throws InterruptedException {
-		// TODO Auto-generated method stub
+
 		Mythread m = new Mythread();
 		m.start();
-		
-//
-//		for (int i = 0; i <= 5; i++) {
-//			System.out.println("MyThread 2.0 :");
-//		}
 
 	}
 
