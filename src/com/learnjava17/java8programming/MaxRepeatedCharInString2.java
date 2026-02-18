@@ -1,8 +1,10 @@
 package com.learnjava17.java8programming;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.OptionalLong;
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -21,12 +23,10 @@ public class MaxRepeatedCharInString2 {
 					.collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
 
 			
-			OptionalLong maxFrequency = frequencyMap.values().stream().mapToLong(Long::longValue).max();
+			 Optional<Long> maxFrequency = frequencyMap.values().stream().max(Comparator.comparingLong(n -> n));
 
 			if (maxFrequency.isPresent()) {
-				long max = maxFrequency.getAsLong();
-
-				
+				Long max = maxFrequency.get();
 				List<Character> maxChars = frequencyMap.entrySet().stream().filter(entry -> entry.getValue() == max)
 						.map(Map.Entry::getKey).collect(Collectors.toList());
 

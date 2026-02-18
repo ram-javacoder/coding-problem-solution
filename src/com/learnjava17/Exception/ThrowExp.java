@@ -10,6 +10,7 @@ public class ThrowExp {
 		
 			System.out.println("Caught Inside help");
 			throw e;
+			
 		}
 		
 		

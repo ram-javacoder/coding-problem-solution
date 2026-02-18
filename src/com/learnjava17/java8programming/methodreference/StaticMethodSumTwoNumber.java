@@ -22,5 +22,11 @@ public class StaticMethodSumTwoNumber {
 		sum s = StaticMethodSumTwoNumber::addNum; //Method reference
 		s.add(23, 20);
 
+		//If StaticMethodSumTwoNumber class has non-static method we will write like
+		//MultiplyNumber m = new MultiplyNumber();
+		//MulOfNum i =  m:mul;
+		// i.mul(12,12);
+		
+		
 	}
 }

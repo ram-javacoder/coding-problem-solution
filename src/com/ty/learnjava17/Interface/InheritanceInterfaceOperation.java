@@ -13,6 +13,7 @@ interface Q extends P {
 
 class C implements Q {
 
+	@Override
 	public void print() {
 
 		System.out.println("P Class Interface Print method...");

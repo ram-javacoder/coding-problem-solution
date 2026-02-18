@@ -22,8 +22,6 @@ public class EmployeeOperation {
 	System.out.println("***************************************************");
 	Arrays.sort(arr);
 	
-	
-	
 	for (Employee employee : arr) {
 		
 		System.out.println(employee);

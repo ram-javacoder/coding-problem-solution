@@ -12,9 +12,9 @@ public class ReverseStringUsingSubStringway2 {
 
 			String subString = stringArray[i].substring(0, stringArray[i].length());
 
-			for (int j = subString.length(); j > 0; j--) {
+			for (int j = subString.length()-1; j >=0; j--) {
 
-				reverseString = reverseString + subString.charAt(j-1);
+				reverseString = reverseString + subString.charAt(j);
 
 			}
 			reverseString=reverseString+" ";

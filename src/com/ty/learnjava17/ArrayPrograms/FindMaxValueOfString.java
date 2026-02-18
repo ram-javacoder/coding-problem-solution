@@ -26,12 +26,8 @@ Explanation:
 Each string in the array has value 1. Hence, we return 1.
 */
 
-
-
-
 public class FindMaxValueOfString {
 
-	
 	public static void main(String[] args) {
 
 		String str[] = { "alic3", "bob", "3", "4", "00000" };
@@ -66,6 +62,4 @@ public class FindMaxValueOfString {
 		}
 
 	}
-
-	
 }

@@ -11,7 +11,6 @@ interface childInterface extends ParentFunctionalInterface {
 
 	void childabstractMethod();
 	
-	
 
 }
 
@@ -30,17 +29,15 @@ class methodDefinition implements childInterface {
 
 	}
 
-
-
 }
 
 public class SampleFunctionalInterface {
 
 	public static void main(String args[]) {
-		methodDefinition m = new methodDefinition();
+		methodDefinition m = new methodDefinition();   //childInterface m = new methodDefinition();
 		m.parentabstractMethod();
 		m.childabstractMethod();
-
+		
 	}
 
 }

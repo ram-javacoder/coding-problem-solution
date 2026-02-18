@@ -54,7 +54,7 @@ public class EmployeeOperation {
 
 		// way-6
 		System.out.println("\nWay-6 Print elements :");
-		lhm.entrySet().stream().forEach(System.out::println);
+		lhm.entrySet().forEach(System.out::println);
 
 	}
 

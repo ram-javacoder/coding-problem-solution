@@ -31,12 +31,14 @@ class Department {
 	private String deptName;
 	private int numOfDocters;
 
-	private final Hospital hospital; 
+	private final Hospital hospital;
 
 	Department(String deptName, int numOfDocters, String hospitalName, String location) {
 		this.deptName = deptName;
 		this.numOfDocters = numOfDocters;
-		this.hospital = new Hospital(hospitalName, location);  //Composition
+		this.hospital = new Hospital(hospitalName, location); // Composition This is Composition ✅ because Hospital is
+																// created inside Department, and it depends on
+																// Department.
 
 	}
 

@@ -30,6 +30,7 @@ public class LongestCommonPrefix {
 			}
 
 			// If the prefix becomes empty, no common prefix is found
+			
 			if (prefix.isEmpty()) {
 				break;
 			}

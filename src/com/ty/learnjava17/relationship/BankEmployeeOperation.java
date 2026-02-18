@@ -58,7 +58,7 @@ public class BankEmployeeOperation {
 		
 		Bank b = new Bank("SBI");
 
-		Set<Employee> employee = new HashSet<Employee>();
+		Set<Employee> employee = new HashSet<Employee>()	;
 		employee.add(emp);
 		b.setEmployee(employee);
 

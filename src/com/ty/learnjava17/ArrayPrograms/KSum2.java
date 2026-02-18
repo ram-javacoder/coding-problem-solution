@@ -9,7 +9,7 @@ public class KSum2 {
 	public static void main(String[] args) {
 
 		int[] nums = { 1, 0, -1, 0, -2, 2 };
-		int k = 3;
+		int k = 2;
 		int target = 0;
 
 		List<List<Integer>> result = kSum(nums, k, target);
@@ -57,9 +57,9 @@ public class KSum2 {
 				left++;
 				right--;
 
-				while (left < right && nums[left] == nums[left - 1])
+				while (left < right && nums[left] == nums[left - 1])   // Handling duplicate
 					left++;
-				while (left < right && nums[right] == nums[right + 1])
+				while (left < right && nums[right] == nums[right + 1]) // Handling duplicate 
 					right--;
 			} else if (sum < target) {
 				left++;

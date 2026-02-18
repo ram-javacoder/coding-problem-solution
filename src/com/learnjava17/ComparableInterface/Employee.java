@@ -69,7 +69,6 @@ public class Employee implements Comparable<Employee> {
 		if (this.age > emp.age) {
 			return 1;
 		} else if (this.age < emp.age) {
-
 			return -1;
 		} else {
 			return 0;

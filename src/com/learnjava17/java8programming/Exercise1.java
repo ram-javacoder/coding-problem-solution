@@ -2,6 +2,7 @@ package com.learnjava17.java8programming;
 
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
@@ -38,8 +39,7 @@ public class Exercise1 {
 		System.out.println("Finding factorial using reduce method :");
 		int factorial = arr.stream().reduce(1, (a, b) -> a * b);
 		System.out.println(factorial);
- 
-		
+
 		// Map Method
 		System.out.println("\nPrinting factorial of the Number after converting Integer to Long");
 		long factorial_1 = arr.stream().mapToLong(n -> n).reduce(1L, (a, b) -> a * b);
@@ -47,8 +47,8 @@ public class Exercise1 {
 
 		// reduce method
 		System.out.println("Using reduce method");
-		Optional<Integer> largest = arr.stream().reduce((n1, n2) -> n1 > n2 ? n1 : n2);
-		System.out.println("Largest number is :" + largest.get());
+		int largest = arr.stream().reduce((n1, n2) -> n1 > n2 ? n1 : n2).orElse(null);
+		System.out.println("Largest number is :" + largest);
 		System.out.println("\nLargest name");
 		Optional<String> largeName = name.stream().reduce((n1, n2) -> n1.length() > n2.length() ? n1 : n2);
 		System.out.println(largeName.get());
@@ -58,7 +58,7 @@ public class Exercise1 {
 		System.out.println("Sum of Number is :" + sum);
 
 		System.out.println("\nFinding factorial using reduce method");
-		int fact1 = IntStream.range(1, 6).reduce(1,(n1, n2) -> n1 * n2);
+		int fact1 = IntStream.range(1, 6).reduce(1, (n1, n2) -> n1 * n2);
 		System.out.println(fact1);
 
 		// Collector
@@ -70,8 +70,11 @@ public class Exercise1 {
 		upper.forEach(System.out::println);
 
 		// Getting minimum value
-		int m = arr.stream().min(Comparator.comparing(Integer::valueOf)).get();
-		System.out.println("Minimum value in Collection is :" + m);
+		int min = arr.stream().min(Comparator.comparingInt(n -> n)).get(); // Integer::valueOf is redundant here if
+																				// arr is already a List<Integer>.
+		System.out.println("Minimum value in Collection is :" + min);
+
+		// int m = Collections.min(arr); ----> shortest and cleanest
 
 		/*
 		 * Comparator.comparing(Integer::valueOf): This creates a Comparator that
@@ -85,10 +88,10 @@ public class Exercise1 {
 		 */
 
 		// Getting maximum value
-		int ma = arr.stream().max(Comparator.comparing(Integer::valueOf)).get();
-		System.out.println("Maximum value in Collection is :" + ma);
-
-	
+		int max = arr.stream().max(Comparator.comparing(Integer::valueOf)).get();
+		System.out.println("Maximum value in Collection is :" + max);
+		
+		
 	}
 
 }

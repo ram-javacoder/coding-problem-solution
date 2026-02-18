@@ -8,7 +8,7 @@ public class FindMaxFrequencyChar {
 
 	public static void main(String[] args) {
 
-		String str = "ramkumar";
+		String str = "ADDDCCDCCC";
 		System.out.println("Input : " + str);
 		maxRepeatingChar(str);
 

@@ -3,7 +3,7 @@ package com.ty.learnjava17.stringprogram;
 public class CheckPolindrome {
 
 	    public static void main(String[] args) {
-	        String str = "abbaaa";
+	        String str = "mom"; 
 
 	        if (isPalindrome(str)) {
 	            System.out.println("Yes! It is a palindrome");

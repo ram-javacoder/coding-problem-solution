@@ -14,7 +14,7 @@ final class ImmutableStu {
 		super();
 		this.rollno = rollno;
 		this.name = name;
-		this.mark = new HashMap<>(mark); 
+		this.mark = new HashMap<>(mark); // Defensive copying
 	}
 
 	public int getRollno() {
@@ -26,7 +26,7 @@ final class ImmutableStu {
 	}
 
 	public Map<String, Double> getMark() {
-		return Collections.unmodifiableMap(mark);
+		return Collections.unmodifiableMap(mark); // Read-only view
 	}
 
 }
@@ -41,11 +41,21 @@ public class ImmutableStudent {
 
 		ImmutableStu stu = new ImmutableStu(123, "Ram", mark);
 		stu.getMark().put("Tamil", 80.0);
-		
-		
+
 		System.out.println("Roll no : " + stu.getRollno());
 		System.out.println("Name : " + stu.getName());
 		System.out.println("Marks : " + stu.getMark());
 
 	}
 }
+
+/*
+ * It shows you understand defensive copying (new HashMap<>(mark) in
+ * constructor).
+ * 
+ * It shows you know how to protect mutable fields
+ * (Collections.unmodifiableMap() in getter).
+ * 
+ * It naturally demonstrates immutability when you try to modify and get
+ * UnsupportedOperationException.
+ */

@@ -6,23 +6,26 @@ public class FindBigDiff {
 
 	public static void main(String[] args) {
 
-		int arr[] = { 7, 2, 10, 9,15 };
-		int max = 0;
+		int arr[] = { 7, 2, 10, 9, 15 };
+		int maxDifferent = findMaxDifferent(arr);
+		System.out.println("Input: " + Arrays.toString(arr));
+		System.out.println("Maximum difference: " + maxDifferent);
+	}
 
-		for (int i = 0; i < arr.length; i++) {
+	private static int findMaxDifferent(int[] arr) {
+		int max = arr[0];
+		int min = arr[0];
 
-			for (int j = 0; j < arr.length; j++) {
-
-				int diff = arr[i] - arr[j];
-				if (diff > max) {
-					max = diff;
-				}
-
+		for (int i : arr) {
+			if (i < min) {
+				min = i;
+			}
+			if (i > max) {
+				max = i;
 			}
 
 		}
-		System.out.println("Elements in Array : " + Arrays.toString(arr));
-		System.out.println("Biggest difference : " + max);
 
+		return max - min;
 	}
 }

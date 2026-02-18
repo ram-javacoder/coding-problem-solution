@@ -32,7 +32,7 @@ public class NumberListOperations {
 
 	private static void sumOfAllList(List<List<Integer>> listOfLists) {
 
-		int sum = listOfLists.stream().flatMapToInt(list -> list.stream().mapToInt(n -> n)).sum();
+		int sum = listOfLists.stream().flatMapToInt(list -> list.stream().mapToInt(Integer::intValue)).sum();
 		System.out.println(sum);
 	}
 

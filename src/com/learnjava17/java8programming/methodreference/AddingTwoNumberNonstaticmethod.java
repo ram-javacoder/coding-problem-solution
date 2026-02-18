@@ -3,6 +3,7 @@ package com.learnjava17.java8programming.methodreference;
 interface sumofNum {
 
 	void adding(int x, int y);
+
 }
 
 public class AddingTwoNumberNonstaticmethod {

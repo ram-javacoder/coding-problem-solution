@@ -9,9 +9,11 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 /*1️. Generate Category-wise Sales Report
-You are tasked with generating a category-wise product sales report for the last 24 hours, with multiple filtering rules:
+You are tasked with generating a category-wise product sales report for the last 24 hours, 
 
-Consider only orders with a total value  ₹500.
+with multiple filtering rules:
+
+Consider only orders with a total value greater than  ₹500.
 
 Exclude any products marked as "out of stock".
 

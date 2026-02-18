@@ -15,7 +15,7 @@ public class PrintduplicateCharInWord {   //Print duplicate Characters in each S
 			String duplicates = word.toLowerCase().chars().mapToObj(c -> (char) c)
 					.collect(Collectors.groupingBy(c -> c, Collectors.counting())).entrySet().stream()
 					.filter(entry -> entry.getValue() > 1).map(Map.Entry::getKey).map(String::valueOf)
-					.collect(Collectors.joining(" "));
+					.collect(Collectors.joining(","));
 
 			if (!duplicates.isEmpty()) {
 				result.append("[").append(word).append("] -> ").append(duplicates).append("\n");

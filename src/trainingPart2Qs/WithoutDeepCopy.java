@@ -11,7 +11,7 @@ class StudentWithoutDeepCopy {
 	public StudentWithoutDeepCopy(String stu_name, Map<String, Integer> mark) {
 		super();
 		this.stu_name = stu_name;
-		this.mark = mark;     //Direct assignment (shallow copy)
+		this.mark = mark; // Direct assignment (shallow copy)
 	}
 
 	public String getStu_name() {
@@ -32,19 +32,17 @@ class StudentWithoutDeepCopy {
 public class WithoutDeepCopy {
 
 	public static void main(String[] args) {
-		
+
 		Map<String, Integer> map = new HashMap<String, Integer>();
 		map.put("English", 98);
 		map.put("Computer Science", 99);
-		
+
 		StudentWithoutDeepCopy stu = new StudentWithoutDeepCopy("Ram", map);
-		System.out.println("Before modifying : " +stu);
-		
+		System.out.println("Before modifying : " + stu);
+
 		map.put("Tamil", 80);
-		System.out.println("After modifying : " +stu);  //Changes Student's marks!
-		
-		
-		
+		System.out.println("After modifying : " + stu); // Changes Student's marks!
+
 	}
-	
+
 }

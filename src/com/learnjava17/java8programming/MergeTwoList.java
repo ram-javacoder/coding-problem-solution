@@ -16,8 +16,8 @@ public class MergeTwoList {
 
 		List<Integer> list1 = Arrays.asList(1, 2, 3, 4, 5);
 		List<Integer> list2 = Arrays.asList(6, 7, 8, 9, 10);
-		
-		
+
+		//int sample = Stream.of(list1, list2).flatMap(List::stream).max(Comparator.comparingInt(n -> n)).get();
 		/*
 		 * Alternative approach - > List <List<Integer>> numbersIntegers =
 		 * List.of(list1, list2,list3);
@@ -32,7 +32,7 @@ public class MergeTwoList {
 		// Integer max1 = mergeList.stream().max((a, b) -> a - b).get();
 
 		Integer min = mergeList.stream().min(Integer::compare).get();
-		
+
 		System.out.println("List 1 :" + list1);
 		System.out.println("List 2 :" + list2);
 

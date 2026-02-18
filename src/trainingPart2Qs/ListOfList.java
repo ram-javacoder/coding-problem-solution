@@ -30,7 +30,6 @@ public class ListOfList {
 		listOfList.add(number);
 
 		
-		
 		System.out.println("[");
 		for (List<String> string : listOfList) {
 

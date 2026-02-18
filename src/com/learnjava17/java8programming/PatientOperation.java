@@ -3,6 +3,7 @@ package com.learnjava17.java8programming;
 import java.time.LocalDate;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class PatientOperation {
 
@@ -20,7 +21,7 @@ public class PatientOperation {
 		patientList.add(patient3);
 		patientList.add(patient4);
 		patientList.add(patient5);
-
+		
 		System.out.println("Patients Details :");
 		for (Patient patients : patientList) {
 
@@ -38,7 +39,9 @@ public class PatientOperation {
 		System.out.println("\nPatients whose belongs to Corona and age below 23");
 		patientList.stream().filter(a -> a.getDisease().equalsIgnoreCase("Corona") && a.getAge() <= 23)
 				.forEach(System.out::println);
+		System.out.println("-----------------------");
 
+		
 	}
 
 }

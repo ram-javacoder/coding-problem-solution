@@ -1,6 +1,7 @@
 package com.learnjava17.java8programming;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -15,5 +16,7 @@ public class ReverseEachWords {
 				.collect(Collectors.toList());
 		System.out.println("Before reversing :" + str);
 		System.out.println("After reversing :" + reverse);
+			
+		
 	}
 }

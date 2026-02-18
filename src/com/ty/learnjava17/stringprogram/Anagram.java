@@ -16,13 +16,13 @@ public class Anagram {
 	public static void main(String[] args) {
 		System.out.println("Check two String is Anagram or not :");
 		System.out.println("Enter the first String :");
-		String s1 = sc.nextLine();
+		String s1 = sc.nextLine();  //LISTEN
 		System.out.println("Enter the second String :");
-		String s2 = sc.nextLine();
+		String s2 = sc.nextLine();  //SILENT
 		
-		char c1[]=s1.toCharArray();
+		char c1[]=s1.toCharArray(); //['L','I','S','T','E','N']
 		char c2[]=s2.toCharArray();
-		Arrays.sort(c1);
+		Arrays.sort(c1);      
 		Arrays.sort(c2);
 
 		if (s1.length() != s2.length()) {
@@ -43,7 +43,7 @@ public class Anagram {
 
 }
 
-/*
+/*//
  * Check two String is Anagram or not :
  * 
  * Enter the first String : LISTEN Enter the second String : SILENT

@@ -19,6 +19,7 @@ public class ComparingnIntMethod {
 		// name.sort(Comparator.comparingInt(l -> l.length()));
 		
 		//Way -3
+		
 		//Collections.sort(name,lengthComparator);
 		
 		System.out.println("Name sorted by length in Ascending order :" + name);

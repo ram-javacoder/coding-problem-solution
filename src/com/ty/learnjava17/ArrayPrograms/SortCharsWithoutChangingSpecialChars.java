@@ -8,7 +8,7 @@ public class SortCharsWithoutChangingSpecialChars {
 
 	public static void main(String[] args) {
 
-		String input = "ZaAbBADCbGkjg!@#123Kj";
+		String input = "xC^cb@AaB)";  //ZaAbBADCbGkjg!@#123Kj
 		String output = sortCharactersOnly(input);
 		System.out.println("Input:  " + input);
 		System.out.println("Output: " + output);

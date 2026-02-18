@@ -17,12 +17,11 @@ public class TryFinallyExample {
 		int numerator = 10;
 		int denominator = 0;
 
-		
 		try {
 			return numerator / denominator;
 		} catch (ArithmeticException e) {
-			
-			System.out.println("Cannot divide by zero.");
+
+			System.out.println("Cannot divide by zero." + e.toString());
 			return 0;
 		}
 	}

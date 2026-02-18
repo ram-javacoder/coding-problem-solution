@@ -43,7 +43,7 @@ class Car {
 
 	public Car() {
 		super();
-		this.e = new Engine();
+		this.e = new Engine(); // Case 1: Engine created inside Car (Composition)
 
 	}
 
@@ -52,7 +52,7 @@ class Car {
 		this.name = name;
 		this.color = color;
 		this.price = price;
-		this.e = e;
+		this.e = e; // Case 2: Engine passed from outside (Aggregation)
 
 	}
 
@@ -61,7 +61,7 @@ class Car {
 		System.out.println("Details of Car :");
 		System.out.println("Name :" + name);
 		System.out.println("Color :" + color);
-		System.out.println("Price : " +price);
+		System.out.println("Price : " + price);
 		this.e.detailsOfEngine();
 		System.out.println(" ");
 
@@ -79,7 +79,10 @@ public class CarEngineRelation {
 		Engine e2 = new Engine("950", "600cc", 4, "Diesel");
 		Car c1 = new Car("Maruthi Swift", "Blue", 300000, e2);
 		c1.detailsOfCar();
-		
+
 	}
 
 }
+
+//Default constructor (Car()) → creates a new Engine → Composition (Car owns the Engine fully).
+//Parameterized constructor (Car(String, String, double, Engine e)) → takes an Engine from outside → Aggregation (Engine can exist independently of Car).

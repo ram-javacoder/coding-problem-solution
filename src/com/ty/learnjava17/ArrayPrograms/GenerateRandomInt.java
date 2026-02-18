@@ -27,11 +27,12 @@ public class GenerateRandomInt {
 
 		for (int i = 0; i < size; i++) {
 
-			int num = random.nextInt(100) + 1;
+			int num = random.nextInt(100000) + 1;
 			randomIntegers.add(num);
 		}
 
 		return randomIntegers;
+
 	}
 
 }

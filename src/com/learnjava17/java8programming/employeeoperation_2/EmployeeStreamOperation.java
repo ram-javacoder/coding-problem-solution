@@ -22,6 +22,14 @@ public class EmployeeStreamOperation {
 		System.out.println("Employee Informations :");
 		datas.stream().forEach(d -> System.out.println(d));
 
+		/*
+		 * System.out.println("<-------------------->");
+		 * datas.stream().max(Comparator.comparingDouble(Employee::getSalary)).
+		 * ifPresentOrElse(emp -> System.out.println(emp), () -> new
+		 * RuntimeException("No Employee"));
+		 * System.out.println("<-------------------->");
+		 */
+
 		// Employees who are managers and salary greater than 100000
 		Predicate<Employee> employeeWithManagerPosition = m -> m.getJobTitle().contains("Manager");
 
@@ -60,8 +68,8 @@ public class EmployeeStreamOperation {
 				.forEach(s -> System.out.println("Employee names :" + s));
 
 		// Find out Maximum Year of Joining
-		Optional<LocalDateTime> maximumYear = datas.stream().map(Employee::getDateOfJoining)
-				.max(LocalDateTime::compareTo);
+		LocalDateTime maximumYear = datas.stream().map(Employee::getDateOfJoining)
+				.max(LocalDateTime::compareTo).get();
 
 		// Filter out all employees who have joined in the last 5 years and have a
 		// performance rating of less than 8,
@@ -74,8 +82,7 @@ public class EmployeeStreamOperation {
 //		    .filter(emp -> emp.getSalary() >= 60000 && emp.getSalary() <= 120000) // Salary between 60,000 and 120,000
 //		    .collect(Collectors.toList());
 
-		LocalDate maximumYearsMinus5Years = maximumYear.map(dateTime -> dateTime.toLocalDate().minusYears(5))
-				.orElse(null);
+		LocalDate maximumYearsMinus5Years = maximumYear.toLocalDate().minusYears(5);
 
 		System.out.println(
 				"\nEmployees who have joined in the last 5 years and have a performance rating of less than 8 but have a salary between 60,000 and 120,000 : ");
@@ -88,14 +95,13 @@ public class EmployeeStreamOperation {
 				.collect(Collectors.toList()).forEach(s -> System.out.println("Employee :" + s.getName() + ", Salary :"
 						+ s.getSalary() + ", Date of Joining :" + s.getDateOfJoining() + ", "));
 
+		
 		/*
-		 * Employees who have salary less than 50,000, but are in the Sales or Marketing
-		 * department, Calculate the sum of the salaries of the remaining employees, but
-		 * only for those who have more than 3 years of experience, Find the average age
-		 * of the remaining employees, but only for those who have a performance rating
-		 * of at least 7
+		 * Remove employees earning less than 50,000 who work in the Sales or Marketing
+		 * departments. From the remaining employees, calculate the total salary of
+		 * those with more than three years of experience, and determine the average age
+		 * of employees whose performance rating is at least 7.
 		 */
-
 		
 		double sumOfSalaries = datas.stream().filter(
 				employee -> employee.getSalary() < 50000 && employee.getDepartment().equalsIgnoreCase("Marketing")
@@ -136,8 +142,8 @@ public class EmployeeStreamOperation {
 		highestPaidInDept.forEach((Dept, emp) -> System.out.println("Department : " + Dept + ", Employee name : "
 				+ emp.getName() + ", Employee's salary : " + emp.getSalary()));
 
-		//Alternative approach
-		
+		// Alternative approach
+
 		/*
 		 * Map<String, List<Employee>> groupedEmployee = datas.stream()
 		 * .collect(Collectors.groupingBy(Employee::getDepartment));
@@ -153,8 +159,7 @@ public class EmployeeStreamOperation {
 		 * System.out.println("Department: " + dept); topEarners.forEach(e ->
 		 * System.out.println("  " + e.getName() + " -> ₹" + e.getSalary()) ); });
 		 */
-		
-		
+
 		// Find out maximum age of Employee in each Department
 		System.out.println("\nFind employee who has maximum age in each department");
 		Map<String, Employee> findMaxAgeEachDept = datas.stream().collect(

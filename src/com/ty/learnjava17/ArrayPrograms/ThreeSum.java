@@ -7,7 +7,7 @@ import java.util.List;
 public class ThreeSum {
 
 	public static void main(String[] args) {
-		int[] nums = { -1, 0, 1, 2, -1, -4,0 };
+		int[] nums = { -1, 0, 1, 2, -1, -4,2 };
 
 		List<List<Integer>> triplets = findTriplets(nums);
 
@@ -42,7 +42,7 @@ public class ThreeSum {
 
 					left++;
 					right--;
-				} else if (sum < 0) {
+				} else if (sum < 3) {
 					left++; // Need bigger number
 				} else {
 					right--; // Need smaller number
