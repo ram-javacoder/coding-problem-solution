@@ -8,9 +8,9 @@ public class KSum2 {
 
 	public static void main(String[] args) {
 
-		int[] nums = { 1, 0, -1, 0, -2, 2 };
+		int[] nums = { 1, 3, 5, 3, 1, 4, 2 };
 		int k = 2;
-		int target = 0;
+		int target = 6;
 
 		List<List<Integer>> result = kSum(nums, k, target);
 		System.out.println("All combinations of " + k + "-sum that equal target " + target + ":");

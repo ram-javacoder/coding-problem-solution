@@ -1,7 +1,5 @@
 package com.javalearn17.collection.queue;
 
-import java.util.Iterator;
-import java.util.LinkedList;
 import java.util.PriorityQueue;
 import java.util.Queue;
 

@@ -18,10 +18,10 @@ public class RelativeSort {
 	private static int[] relativeSort(int[] arr1, int[] arr2) {
 		int k = 0;
 		for (int i = 0; i < arr2.length; i++) {
-			int temp = 0;
+
 			for (int j = 0; j < arr1.length; j++) {
 				if (arr2[i] == arr1[j]) {
-					temp = arr1[k];
+					int temp = arr1[k];
 					arr1[k] = arr1[j];
 					arr1[j] = temp;
 					k = k + 1;

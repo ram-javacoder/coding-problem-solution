@@ -15,6 +15,7 @@ public class EnumerationMethod {
 		hashtable.put("A", 1);
 		hashtable.put("C", 3);
 		
+		
 		//Using get method
 		int intValue=hashtable.get("C");
 		System.out.println("Value of C :" +intValue);
@@ -26,8 +27,6 @@ public class EnumerationMethod {
 			System.out.println("Keys :" +key+ " : " +hashtable.get(key));
 		}
 		
-		
-
 	}
 
 }

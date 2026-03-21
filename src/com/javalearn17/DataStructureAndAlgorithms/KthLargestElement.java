@@ -21,8 +21,8 @@ public class KthLargestElement {
 	}
 
 	public static void main(String[] args) {
-		int[] nums = { 3, 2, 1, 5, 6, 4 ,10};
-		int k = 2; //Find the 2nd largest element
+		int[] nums = { 3, 2, 1, 5, 6,6, 4 ,10};
+		int k = 3; //Find the 2nd largest element
 		int result = findKthLargest(nums, k);
 		System.out.println(k + "th largest element is: " + result);
 	}

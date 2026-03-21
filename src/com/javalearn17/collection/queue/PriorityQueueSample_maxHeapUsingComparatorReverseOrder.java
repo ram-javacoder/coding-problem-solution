@@ -24,7 +24,10 @@ public class PriorityQueueSample_maxHeapUsingComparatorReverseOrder {
 		System.out.println(ele);
 		System.out.println(ele.poll());
 		System.out.println(ele);
-
+		System.out.println(ele.poll());
+		System.out.println(ele);
+		System.out.println(ele.poll());
+		System.out.println(ele);
 	}
 
 }

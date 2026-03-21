@@ -18,7 +18,7 @@ public class ReversingObj2 {
 
 		int i = 0;
 		int count = obj.size() - 1; // Adjust count to point to the last element
-		while (i < count) { // Change condition to i < count
+		while (i <count) { // Change condition to i < count
 			Integer temp = obj.get(i);
 			obj.set(i, obj.get(count));
 			obj.set(count, temp);

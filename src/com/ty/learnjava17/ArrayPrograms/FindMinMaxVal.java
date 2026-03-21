@@ -1,9 +1,7 @@
-package com.javalearn17.codetest;
+package com.ty.learnjava17.ArrayPrograms;
 
 import java.util.Arrays;
 import java.util.Comparator;
-import java.util.HashMap;
-import java.util.Map;
 
 /*Given five positive integers, find the minimum and maximum values that can be calculated by 
 summing exactly four of the five integers. Then print the respective minimum and maximum values 
@@ -16,7 +14,7 @@ min = 16
 max = 24
 */
 
-public class CodeTest {
+public class FindMinMaxVal {
 
 	public static void main(String[] args) {
 

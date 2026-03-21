@@ -27,7 +27,7 @@ public class FailFastAndFailSafe {
 			while (itr.hasNext()) {
 
 				System.out.println(itr.next());
-				fruits.add("Graps"); // Concurrent Modification Exception
+				fruits.remove("Apple"); // Concurrent Modification Exception
 			}
 
 		} catch (Exception e) {
