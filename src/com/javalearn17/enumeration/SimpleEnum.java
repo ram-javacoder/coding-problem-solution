@@ -2,8 +2,10 @@ package com.javalearn17.enumeration;
 
 enum Color_ {
 
-		RED, GREEN, YELLOW
-	}
+		RED, GREEN, YELLOW;
+		
+	
+}
 
 	public class SimpleEnum {
 

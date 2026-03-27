@@ -1,4 +1,4 @@
-package com.javalearn17.codetest;
+package com.learnjava17.java8programming;
 
 import java.util.Arrays;
 import java.util.Comparator;
@@ -42,7 +42,7 @@ class Employee {
 }
     
 
-public class CodeTest {
+public class EmployeeOprn {
 	
 	public static void main(String[] args) {
 	

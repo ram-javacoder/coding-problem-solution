@@ -38,8 +38,6 @@ class Department {
 		this.numOfDocters = numOfDocters;
 		this.hospital = new Hospital(hospitalName, location); // Composition This is Composition ✅ because Hospital is
 																// created inside Department, and it depends on
-																// Department.
-
 	}
 
 	public void detailsOfDepartment() {
