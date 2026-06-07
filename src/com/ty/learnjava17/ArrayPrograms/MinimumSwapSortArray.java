@@ -17,7 +17,7 @@ public class MinimumSwapSortArray {
 		}
 
 		// Step 2: Sort the array based on value
-		Arrays.sort(pair, Comparator.comparingInt(a -> a[0]));
+		Arrays.sort(pair, (a,b) -> a[0] - b[0]);
 
 		// Step 3: Track visited positions
 		boolean[] visited = new boolean[n];
