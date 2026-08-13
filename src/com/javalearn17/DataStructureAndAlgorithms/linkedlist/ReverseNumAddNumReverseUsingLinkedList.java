@@ -81,7 +81,6 @@ public class ReverseNumAddNumReverseUsingLinkedList {
 			current = current.next;
 
 		}
-
 		return dummy.next;
 	}
 

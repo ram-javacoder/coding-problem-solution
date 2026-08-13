@@ -7,32 +7,25 @@ public class FindMissingNumber {
 
 	public static void main(String[] args) {
 
-		int arr[] = { 1, 1, 2, 4, 5, 5, 6 };
-		findMissingNumbers(arr);
+		int[] arr = {3, 7, 1, 2, 9, 4, 5};
+
+		int n = 8;
+
+		int missing = findMissingNumber(arr, n);
+
+		System.out.println("Missing Number : " + missing);
 	}
 
-	private static void findMissingNumbers(int[] arr) {
-		List<Integer> result = new ArrayList<>();
+	private static int findMissingNumber(int[] arr, int n) {
 
-		for (int i = 0; i < arr.length - 1; i++) {
-			
-			if (arr[i] == arr[i + 1])
-				continue;
+		int expectedSum = n * (n + 1) / 2;
 
-			int current = arr[i];
-			int next = arr[i + 1];
+		int actualSum = 0;
 
-			
-			for (int j = current + 1; j < next; j++) {
-				result.add(j);
-			}
+		for (int num : arr) {
+			actualSum += num;
 		}
 
-		if (result.isEmpty()) {
-			System.out.println("No missing numbers");
-		} else {
-			System.out.println("Missing numbers: " + result);
-		}
+		return expectedSum - actualSum;
 	}
-
 }

@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class Anagrams {
+public class GroupAnagrams {
 
 	public static List<List<String>> groupAnagrams(String[] strs) {
 		

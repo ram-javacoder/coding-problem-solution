@@ -33,16 +33,9 @@ public class LongestValidParanthese {
 					int length = i - stack.peek();
 					maxLength = Math.max(maxLength, length);
 				}
-				
-				
-				
 			}
-			
-			
-			
 		}
-		
-		
+
 		return maxLength;
 	}
 	

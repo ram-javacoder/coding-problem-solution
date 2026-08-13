@@ -52,9 +52,7 @@ class Minstack {
 	// Main method for testing
 	public static void main(String[] args) {
 		Minstack stack = new Minstack();
-		
-		
-		
+
 		stack.push(5);
 		stack.push(3);
 		stack.push(7);

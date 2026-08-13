@@ -5,7 +5,7 @@ public class ArraySumRecursion {
 	public static int sumOfArray(int[] arr, int n) {
 
 		// Base case: when array is empty or fully processed
-		if (n <= 0) {
+		if (n <=0) {
 			return 0;
 		}
 		// Recursive case: sum of current element and sum of rest
@@ -21,3 +21,13 @@ public class ArraySumRecursion {
 		System.out.println("Sum of array elements: " + sum);
 	}
 }
+
+
+//      factorial:
+
+//		if (n < 1) {
+//		return 1;
+//		}
+//		// Recursive case: sum of current element and sum of rest
+//
+//		return arr[n - 1] * sumOfArray(arr, n - 1);

@@ -28,11 +28,9 @@ public class SelectionSort {
 
 				}
 			}
-
-			int temp = arr[minIndex];
+			int temp = arr[minIndex];    //get minimum number
 			arr[minIndex] = arr[i];
 			arr[i] = temp;
-
 		}
 
 	}
