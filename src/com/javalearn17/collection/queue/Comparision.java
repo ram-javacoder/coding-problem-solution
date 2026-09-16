@@ -52,8 +52,7 @@ public class Comparision {
 		while (!pq.isEmpty()) {
 			System.out.println(pq.poll());
 		}
-		
-		
+
 	}
 
 }

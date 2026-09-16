@@ -42,7 +42,6 @@ class EmployeeGroupGender {
 	public String toString() {
 		return "Employee id: " + id + ", name: " + name + ", age: " + age + ", gender: " + gender + "]";
 	}
-
 }
 
 public class GroupEmployeeIntoTwoGroupBasedOnGender {
@@ -51,10 +50,10 @@ public class GroupEmployeeIntoTwoGroupBasedOnGender {
 
 		List<EmployeeGroupGender> employees =  Arrays.asList(
 		        new EmployeeGroupGender(1, "Sunil", 32, "Male"),
-		        new EmployeeGroupGender(1, "Joshi", 34, "Male"),
-		        new EmployeeGroupGender(1, "Rishi", 15, "Male"),
-		        new EmployeeGroupGender(1, "Anjali", 31, "Female"),
-		        new EmployeeGroupGender(1, "Nisha", 25, "Female")
+		        new EmployeeGroupGender(2, "Joshi", 34, "Male"),
+		        new EmployeeGroupGender(3, "Rishi", 15, "Male"),
+		        new EmployeeGroupGender(4, "Anjali", 31, "Female"),
+		        new EmployeeGroupGender(5, "Nisha", 25, "Female")
 		      );
 		
 		Map<Boolean, List<EmployeeGroupGender>> groupEmployee =  employees.stream().collect(Collectors.partitioningBy(emp-> emp.getGender().equals("Male")));
@@ -66,7 +65,5 @@ public class GroupEmployeeIntoTwoGroupBasedOnGender {
 		
 		System.out.println("Female Employees: ");
 		groupEmployee.get(false).forEach(System.out::println);
-		
-		
 	}
 }

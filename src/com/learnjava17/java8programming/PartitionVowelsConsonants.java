@@ -12,7 +12,7 @@ public class PartitionVowelsConsonants {
 	}
 
 	private static void partitionVowelsConsonent(List<Character> characters) {
-		characters.stream().collect(Collectors.partitioningBy(ch -> "aeiou".indexOf(Character.toLowerCase(ch)) >= 0 ))
+		characters.stream().collect(Collectors.partitioningBy(ch -> "aeiou".indexOf(Character.toLowerCase(ch)) >=0 ))
 		.forEach((vowel, consonant) -> {
 			System.out.println(vowel+ ": " +consonant);
 			

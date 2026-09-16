@@ -34,7 +34,7 @@ public class Exercise1 {
 		stu3.put(78, "G");
 		stu3.put(48, "H");
 		stu3.put(62, "I");
-		stu3.put(92, null);
+		stu3.put(93, null );
 
 		System.out.println("Before clearing elements :");
 		System.out.println(stu);
@@ -55,7 +55,7 @@ public class Exercise1 {
 		// Using get method to fetch the value
 		System.out.println("Using get method to fetch the value");
 		System.out.println(stu.get(81));
-		System.out.println(stu1.get(80)); // IT will return null
+		System.out.println(stu1.get(80)); // IT will return empty space
 
 		// Generate hashCode number using hashCode()
 		System.out.println("Generating hashcode number");

@@ -14,7 +14,8 @@ import java.util.ArrayList;
 			ele.add(6);
 			ele.ensureCapacity(10);
 			ele.add(6);
-			
+			ele.add(6);
+
 			System.out.println(ele);
 			System.out.println(ele.size());
 			

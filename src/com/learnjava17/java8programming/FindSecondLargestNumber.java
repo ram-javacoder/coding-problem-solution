@@ -1,6 +1,7 @@
 package com.learnjava17.java8programming;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 
 public class FindSecondLargestNumber {
@@ -10,7 +11,7 @@ public class FindSecondLargestNumber {
 		List<Integer> numbers = Arrays.asList(12, 34, 56, 21, 44,12,44);
 
 		Integer secondLargest = numbers.stream().distinct() // Optional: Remove duplicates
-				.sorted((a, b) -> b.compareTo(a)) // Sort in descending order
+				.sorted(Comparator.reverseOrder()) // Sort in descending order
 				.skip(1) // Skip the first element (largest)
 				.findFirst().orElse(null);
 

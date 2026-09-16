@@ -1,9 +1,11 @@
 package com.learnjava17.java8programming;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 // Print all common elements in All three array
 

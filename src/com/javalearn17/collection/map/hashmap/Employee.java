@@ -41,9 +41,4 @@ public class Employee {
 		return "Employee [rollno=" + rollno + ", name=" + name + ", address=" + address + "]";
 	}
 
-	
-
-
-	
-
 }

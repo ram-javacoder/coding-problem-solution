@@ -22,9 +22,8 @@ public class InsertElementInLinkedList {
 			
 			numbers.add(position+1, 3);
 		}
-		
+		System.out.println(numbers.indexOf(3));
 		System.out.println(numbers);
 		
 	}
-
 }

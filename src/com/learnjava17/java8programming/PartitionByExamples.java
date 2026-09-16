@@ -67,10 +67,10 @@ public class PartitionByExamples {
 
 	public static void main(String[] args) {
 
-		List<EmpPartition> employees = List.of(new EmpPartition(101L, "Arjun", "IT", 75000.0, 28, "", LocalDateTime.now()),
-				new EmpPartition(102L, "Sneha", "HR", 85000.0, 30, "", LocalDateTime.now()),
-				new EmpPartition(103L, "Ravi", "Finance", 65000.0, 35, "", LocalDateTime.now()),
-				new EmpPartition(104L, "Meena", "IT", 92000.0, 33, "", LocalDateTime.now()));
+		List<EmpPartition> employees = List.of(new EmpPartition(101L, "Arjun", "IT", 75000.0, 28, "arjun21@gmail.com", LocalDateTime.now()),
+				new EmpPartition(102L, "Sneha", "HR", 85000.0, 30, "sneha12@gmail.com", LocalDateTime.now()),
+				new EmpPartition(103L, "Ravi", "Finance", 65000.0, 35, "ravi123@gmail.com", LocalDateTime.now()),
+				new EmpPartition(104L, "Meena", "IT", 92000.0, 33, "meena321@gmail.com", LocalDateTime.now()));
 
 		System.out.println("Divide employees by whether salary is above or below 75,000.");
 

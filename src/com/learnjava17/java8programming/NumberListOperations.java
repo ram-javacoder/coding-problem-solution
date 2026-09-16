@@ -36,6 +36,8 @@ public class NumberListOperations {
 		System.out.println(sum);
 	}
 
+
+
 	private static void displayListofLists(List<List<Integer>> listOfLists) {
 		for (List<Integer> sublist : listOfLists) {
 			System.out.println(sublist);

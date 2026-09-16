@@ -9,7 +9,7 @@ public class RemoveDuplicateSortingLinkedList {
 
 		ListNode(int value) {
 			this.value = value;
-			this.next = null;
+			this.next =null;
 		}
 	}
 

@@ -18,6 +18,7 @@ public class EmployeeGroup {
 		this.empName = empName;
 		this.jobTiltle = jobTiltle;
 		this.salary = salary;
+
 	}
 
 	public int getEmpId() {

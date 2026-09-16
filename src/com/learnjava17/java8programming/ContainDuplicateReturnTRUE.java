@@ -5,20 +5,18 @@ import java.util.stream.Collectors;
 
 public class ContainDuplicateReturnTRUE {
 
-	public static void main(String[] args) {
-		
-		int arr[] = { 1, 2, 1, 4, 5, 2 };
+    public static void main(String[] args) {
 
-		boolean allUnique = Arrays.stream(arr).mapToObj(n -> n)
-				.collect(Collectors.groupingBy(s -> s, Collectors.counting()))
-				.entrySet().stream().anyMatch(entry -> entry.getValue() > 1);
-				
-		if (allUnique) {
-			System.out.println(true);
-		} else {
-			System.out.println(false);
-		}
-		
+        int arr[] = {1, 2, 1, 4, 5, 2};
 
-	}
+        boolean allUnique = Arrays.stream(arr).mapToObj(n -> n)
+                .collect(Collectors.groupingBy(s -> s, Collectors.counting()))
+                .entrySet().stream().anyMatch(entry -> entry.getValue() > 1);
+
+        if (allUnique) {
+            System.out.println(true);
+        } else {
+            System.out.println(false);
+        }
+    }
 }

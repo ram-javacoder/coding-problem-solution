@@ -21,13 +21,11 @@ public class FindVowelsInString {
 			System.out.println(string + " -> " + (vowels.isEmpty() ? "No vowels" : vowels));
 
 		});
-
 	}
 
 	public static boolean isVowles(char c) {
 
 		return "AEIOUaeiou".indexOf(c) != -1;
-
 	}
 
 }

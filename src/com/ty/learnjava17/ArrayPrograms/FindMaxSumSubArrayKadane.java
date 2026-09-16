@@ -17,12 +17,9 @@ public class FindMaxSumSubArrayKadane {
 		        for (int i = 1; i < arr.length; i++) {
 		            // either take current element OR extend previous subarray
 		            currentSum = Math.max(arr[i], currentSum + arr[i]);
-
 		            // update max
 		            maxSum = Math.max(maxSum, currentSum);
 		        }
-
 		        return maxSum;
 		    }
-
 	}

@@ -26,8 +26,13 @@ final class ImmutableStu {
 	}
 
 	public Map<String, Double> getMark() {
-		return Collections.unmodifiableMap(mark); // Read-only view
+		return new HashMap<>(mark); // Read-only view
 	}
+
+	// or
+//	public Map<String, Double> getMark() {
+//		return Collections.unmodifiableMap(mark); // Read-only view
+//	}
 
 }
 

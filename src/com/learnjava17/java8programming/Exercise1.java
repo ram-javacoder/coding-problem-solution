@@ -30,7 +30,7 @@ public class Exercise1 {
 		name.add("Lakshman");
 		name.add("Poongavanam");
 		name.add("Lokesh");
-		name.add("nanda");
+
 		// Filter method and Sort method
 		System.out.println("Printing all Even number in the List");
 		List<Integer> EvenNumber = arr.stream().filter(i -> i % 2 == 0).sorted().collect(Collectors.toList());

@@ -8,8 +8,6 @@ public class CollectionsMethods {
 	public static void main(String[] args) {
 
 		List<String> fruits = new ArrayList<>();
-		// add Method
-		
 		fruits.add("Mango");fruits.add("Mango");
 		fruits.add("Banana");
 		System.out.println(fruits);
@@ -34,7 +32,5 @@ public class CollectionsMethods {
 		System.out.println("Before removing all occurance of collection :" +addfruitsCollection);
 		addfruitsCollection.removeAll(fruits);
 		System.out.println("After removing all occurance of collection : " +addfruitsCollection);
-		
-		
 	}
 }

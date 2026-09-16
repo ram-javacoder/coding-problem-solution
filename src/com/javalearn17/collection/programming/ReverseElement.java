@@ -24,7 +24,6 @@ public class ReverseElement {
 		for (Integer integer : ele) {
 			System.out.println(integer + " ");
 		}
-		
 
 		name.add("Java");
 		name.add("SQL");
@@ -33,9 +32,6 @@ public class ReverseElement {
 		List<String> setReverseUsingList = new ArrayList<String>(name);
 		Collections.reverse(setReverseUsingList);
 		System.out.println("Reversing set element by converting into List :" +setReverseUsingList);
-		
-		
-		
 	}
 
 }

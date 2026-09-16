@@ -7,7 +7,7 @@ public class RelativeSort {
 	public static void main(String[] args) {
 
 		int arr1[] = { 3, 2, 1, 2, 4, 5, 4, 6 };
-		int arr2[] = { 5, 3, 4, 6 };
+		int arr2[] = { 9, 8, 4, 6 };
 		System.out.println("Array-1 elements : " + Arrays.toString(arr1));
 		System.out.println("Array-2 elements : " + Arrays.toString(arr2));
 

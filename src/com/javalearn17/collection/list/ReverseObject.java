@@ -1,6 +1,8 @@
 package com.javalearn17.collection.list;
 
+import java.util.Collections;
 import java.util.LinkedList;
+import java.util.stream.Collectors;
 
 public class ReverseObject {
 
@@ -12,6 +14,7 @@ public class ReverseObject {
 		obj.add(4);
 		obj.add(5);
 		System.out.println("Before reversing :" +obj);
+		Collections.reverse(obj);
 		System.out.println("After reversing :" +obj);
 		
 	}

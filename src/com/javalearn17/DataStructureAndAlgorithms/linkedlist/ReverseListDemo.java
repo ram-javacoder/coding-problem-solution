@@ -75,5 +75,4 @@ public class ReverseListDemo {
 		r.reverseElement();
 		r.printElement();
 	}
-
 }

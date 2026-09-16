@@ -9,7 +9,7 @@ public class FrequencyOfCharInString {
 
 	public static void main(String[] args) {
 
-		String str[] = { "Apple", "Banana", "Cherry"};
+		String str[] = { "Apple", "Bannana", "Cherry"};
 		findMaxFrequentChar(str);
 
 	}
